@@ -1,0 +1,22 @@
+{
+  "name": "w02d01",
+  "version": "1.0.0",
+  "description": "Week 2 Day 1 lecture",
+  "main": "say-hello-test.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "list": "ls -l",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "testing",
+    "require",
+    "imports",
+    "fun"
+  ],
+  "author": "Andy Lindsay",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
+}

@@ -1,4 +1,8 @@
 const sayHello = (name) => {
+  if (!name) {
+    return null;
+  }
+
   return `hello ${name}`;
 };
 
