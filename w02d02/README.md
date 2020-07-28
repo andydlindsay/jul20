@@ -1,10 +1,10 @@
 # W02D02 - Asynchronous Control Flow
 
 ### To Do
-* [ ] Blocking Code
-* [ ] Asynchronous Programming
-* [ ] `setTimeout` and `setInterval`
-* [ ] File System Functions (`fs`)
+* [x] Blocking Code
+* [x] Asynchronous Programming
+* [x] `setTimeout` and `setInterval`
+* [x] File System Functions (`fs`)
 
 
 
