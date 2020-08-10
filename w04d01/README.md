@@ -7,12 +7,12 @@
 * [x] Intro to CSS
 * [x] Inline styles
 * [x] Style element
-* [ ] Selectors
-* [ ] DevTools
-* [ ] Box Model and Box Sizing
-* [ ] External Stylesheets
-* [ ] CSS Resets/Normalize
-* [ ] Specificity
+* [x] Selectors
+* [x] DevTools
+* [x] Box Model and Box Sizing
+* [x] External Stylesheets
+* [x] CSS Resets/Normalize
+* [x] Specificity
 
 HyperText Markup Language
 

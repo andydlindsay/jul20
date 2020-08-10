@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  border-color: magenta;
+  border-style: solid;
+  border-width: 5px;
+
+  /* border: 5px solid magenta; */
+}
+
+h2 {
+  border: 5px solid violet;
+}
+
+figure {
+  /* padding-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 50px; */
+
+  /* padding: 50px 0 50px 25px;
+  padding: 50px 25px; */
+  padding: 50px;
+  height: 500px;
+  width: 400px;
+  border: 5px dotted violet;
+}
+
+div.content p.more-content input#username {
+  color: white;
+}
+
+h2.heading {
+  color: cyan; 
+  font-size: 25px; 
+  border: 3px dashed yellowgreen;
+}
+
+#main-content {
+  background-color: palegreen;
+}
