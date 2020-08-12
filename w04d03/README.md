@@ -5,8 +5,8 @@
 - [x] XMLHttpRequest (XHR) Object
 - [x] Use AJAX to retrieve data from a remote server
 - [x] Use jQuery to update the DOM with the retrieved data
-- [ ] Use AJAX to submit data to a remote server
-- [ ] All without refreshing the browser
+- [x] Use AJAX to submit data to a remote server
+- [x] All without refreshing the browser
 
 ### Asynchronous JavaScript and XML
 ### eXtensible Markup Language
