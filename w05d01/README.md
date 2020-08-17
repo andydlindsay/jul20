@@ -10,6 +10,24 @@
 - [ ] Aggregation functions
 - [ ] `LIMIT` and `OFFSET`
 
+### RDBMS
+* Relational DataBase Management System
+* psql
+
+### Tabular Data
+* Rows and columns
+* Table === collection of related information
+* Rows === records is a single entity
+* Columns === fields adjectives
+
+### Relational Databases
+* Databases === collections of tables
+* Relational DB === tables are all related to one another in some fashion
+* Linear algebra && calculus
+
+No,SQL
+
+
 ### SELECT Challenges
 
 For the first 5 queries, we'll be using the `users` table.
@@ -19,37 +37,57 @@ For the first 5 queries, we'll be using the `users` table.
 1. List total number of users
 
 ```sql
+SELECT COUNT(*) FROM users;
 
+-- split to multiple lines
+SELECT COUNT(*)
+FROM users;
 ```
 
 2. List users over the age of 18
 
 ```sql
-
+SELECT *
+FROM users
+WHERE age > 18;
 ```
 
 3. List users who are over the age of 18 and have the last name 'Barrows'
 
 ```sql
-
+SELECT *
+FROM users
+WHERE age > 18 AND last_name = 'Barrows';
 ```
 
 4. List users over the age of 18 who live in Canada sorted by age from oldest to youngest and then last name alphabetically
 
 ```sql
-
+SELECT *
+FROM users
+WHERE age > 18 AND country = 'Canada'
+ORDER BY age DESC, last_name ASC;
 ```
 
 5. List users who live in Canada and whose accounts are overdue
 
 ```sql
+SELECT *
+FROM users
+WHERE country = 'Canada' AND payment_due_date < '2020-08-17';
 
+-- with dynamic date!!!
+SELECT *
+FROM users
+WHERE country = 'Canada' AND payment_due_date < NOW();
 ```
 
 6. List all the countries users live in; don't repeat any countries
 
 ```sql
-
+SELECT DISTINCT country
+FROM users
+ORDER BY country;
 ```
 
 For the rest of the queries, we'll be using the `albums` and `songs` tables.
