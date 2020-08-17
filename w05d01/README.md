@@ -1,14 +1,14 @@
 # W5D1 - SQL Intro
 
 ### To Do
-- [ ] Introduction to RDBMS
-- [ ] The Relational Data Model (Tables, Columns, Rows)
-- [ ] `SELECT` Statements
-- [ ] Filtering and ordering
-- [ ] Joining tables
-- [ ] Grouping records
-- [ ] Aggregation functions
-- [ ] `LIMIT` and `OFFSET`
+- [x] Introduction to RDBMS
+- [x] The Relational Data Model (Tables, Columns, Rows)
+- [x] `SELECT` Statements
+- [x] Filtering and ordering
+- [x] Joining tables
+- [x] Grouping records
+- [x] Aggregation functions
+- [x] `LIMIT` and `OFFSET`
 
 ### RDBMS
 * Relational DataBase Management System
@@ -97,37 +97,63 @@ For the rest of the queries, we'll be using the `albums` and `songs` tables.
 7. List all albums along with their songs
 
 ```sql
-
+SELECT album_name, artist_name, track_number, song_name
+FROM songs
+JOIN albums ON albums.id = songs.album_id;
 ```
 
 8. List all albums along with how many songs each album has
 
 ```sql
-
+SELECT album_name, artist_name, COUNT(songs.id) AS num_songs
+FROM songs
+JOIN albums ON albums.id = songs.album_id
+GROUP BY album_name, artist_name;
 ```
 
 9. Enhance previous query to only include albums that have more than 10 songs
 
 ```sql
-
+SELECT album_name, artist_name, COUNT(songs.id) AS num_songs
+FROM songs
+JOIN albums ON albums.id = songs.album_id
+GROUP BY album_name, artist_name
+HAVING COUNT(songs.id) > 10;
 ```
 
 10. List ALL albums in the database, along with their songs if any
 
 ```sql
-
+SELECT album_name, artist_name, song_name
+FROM albums
+LEFT JOIN songs ON albums.id = songs.album_id;
 ```
 
 11. List albums along with average song rating
 
 ```sql
+SELECT album_name, artist_name, AVG(songs.rating)
+FROM albums
+JOIN songs ON albums.id = songs.album_id
+GROUP BY album_name, artist_name;
 
+-- using ROUND
+SELECT album_name, artist_name, ROUND(AVG(songs.rating) * 100) / 100 AS avg_rating
+FROM albums
+JOIN songs ON albums.id = songs.album_id
+GROUP BY album_name, artist_name;
 ```
 
 12. List albums and songs with rating higher than album average
 
 ```sql
-
+SELECT album_name,
+  artist_name,
+  rating,
+  (SELECT AVG(songs.rating) FROM songs WHERE songs.album_id = albums.id) as album_avg
+FROM albums
+JOIN songs ON albums.id = songs.album_id
+WHERE songs.rating > (SELECT AVG(songs.rating) FROM songs WHERE songs.album_id = albums.id);
 ```
 
 ### Useful Links
