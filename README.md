@@ -9,3 +9,4 @@
 * [W04D01 - Intro to CSS](https://github.com/andydlindsay/jul20/tree/master/w04d01)
 * [W04D03 - AJAX!](https://github.com/andydlindsay/jul20/tree/master/w04d03)
 * [W05D01 - Intro to SQL](https://github.com/andydlindsay/jul20/tree/master/w05d01)
+* [W05D02 - Database Design](https://github.com/andydlindsay/jul20/tree/master/w05d02)
