@@ -7,58 +7,59 @@
 - [x] Relationship Types
 - [x] Design Concepts
 - [x] Entity Relationship Diagrams
-- [ ] Breakout: Convert 2 Spreadsheets [15 mins]
-- [ ] Student Suggestion ERD(s)
+- [x] Breakout: Convert 2 Spreadsheets [15 mins]
+- [x] Student Suggestion ERD(s)
 
 ### Primary Key
-* Uniquely identify a particular record
-* Must be unique within the table
-* Can be any data type (always use Integers)
-* Primary key stored in another table is called a Foreign Key
-* PK and the FK MUST be the same data type
+
+- A way of uniquely identifying a particular record within a table 
+- Must be unique (within the table) and can never be null
+- The usual data type is auto-incrementing integer (`INTEGER` or `BIGINT`)
+- A Primary Key stored in another table is known as a `Foreign Key`
+- The Primary Key and Foreign Key **MUST** be the same data type
 
 ### Naming Conventions
-* lowercase, snake_case
-* Table names should always be plural (users, posts, tweets)
-* PK: id
-* FK: singular table name + `_id` (user_id, post_id)
 
-### Data Type
-* Data is cheap!
-* varchar, text, integer, boolean
-* phone numbers: varchar 5555555555
-* postal codes: 90210, 00215 (varchar)
-Safe Secure Storage on AWS S3
+- Table and field names are written in `snake_case`
+- Table names are always pluralized
+- The primary key for each table will simply be called `id`
+- A foreign key is made up of the singular of the primary keys table and the suffix `_id` (eg. `user_id` is the foreign key for the `id` field in the `users` table)
 
-### Relationships
-* One-to-one: 1 record in the 1st table is related to 1 record in the 2nd table
-* One-to-many: 1 record in the 1st table is related to 1 or more records in the 2nd table
-* Many-to-many: 1 or more records in the 1st table is related to 1 or more records in the 2nd table
+### Data Types
 
-### Dos and Don'ts
-* Make fields required based on the initial save state of the record
-* Intelligent default values! created_at timestamps NOW(), active boolean true
-* Calculated fields! Don't use 'em!
-* Custom functions are awesome!!!
-* Try not to delete anything
+- Each field in a table **must** have a data type defined for it
+- The data type tells the database how much room to set aside to store the value _and_ allows the database to perform type validation on data before insertion (to protect the data integrity of the table)
+- Choosing the perfect data type is less of a concern nowadays because memory is now comparably cheap
 
-### ERD Entity Relationship Diagrams
-* 
+### Relationship Types
 
+- **One-to-One**: One record in the first table is related to one (and only one) record in the second table
+- **One-to-Many**: One record in the first table is related to one or more records in the second table
+- **Many-to-Many**: One or more records in the first table are related to one or more records in the second table
 
+- It could be argued that there is really only one relationship type: _One-to-Many_ as One-to-One's are extremely rare and Many-to-Many's are implemented using two _One-to-Many's_
 
+### Design Concepts
 
+- Make fields required based on the records state upon initial creation (remember that additional data can be added to a record after it has been created)
+- Intelligent default values can be set for fields (such as the current timestamp for a `created_on` field)
+- Don't use calculated fields (a field that can be derived from one or more other fields, such as `full_name` is a combination of `first_name` and `last_name`)
+- Pull repeated values out to their own table and make reference to them with a foreign key
+- Try not to delete anything (use a boolean flag instead to mark a record as active or inactive)
+- Consider using a `type` field instead of using two (or more) tables to store very similar data (eg. create an `orders` table with an `order_type` field instead of a `purchase_orders` and a `sales_orders` table)
 
+### Entity Relationship Diagram (ERD)
 
-
-
-
-
+- A visual depiction of the database tables and how they are related to each other
+- Extremely useful for reasoning about how the database should be structured
+- Can be created using pen and paper, a whiteboard, or using an online application
 
 ### Breakout: Convert Two Spreadsheets
 - [Gist with instruction](https://gist.github.com/andydlindsay/20e7305e853bad7b587f294b054cf8de)
 
-### Student Suggestion:
+### Student Suggestion: Restaurant
+
+![restaurant ERD](https://raw.githubusercontent.com/andydlindsay/jul20/master/w05d02/jul20w5d2.png)
 
 ### Useful Links
 * [Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
