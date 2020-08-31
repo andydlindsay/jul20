@@ -12,3 +12,4 @@
 * [W05D02 - Database Design](https://github.com/andydlindsay/jul20/tree/master/w05d02)
 * [W05D03 - SQL from our Apps](https://github.com/andydlindsay/jul20/tree/master/w05d03)
 * [W05D05 - Midterm Project Kickoff](https://github.com/andydlindsay/jul20/tree/master/w05d05)
+* [W07D01 - Component-Based UI w/ React](https://github.com/andydlindsay/jul20/tree/master/w07d01)
