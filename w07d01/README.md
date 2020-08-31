@@ -6,8 +6,8 @@
 - [x] Building a project w/ Create-React-App
 - [x] Components
 - [x] Combining components together
-- [ ] Passing Props
-- [ ] Adding Storybook
+- [x] Passing Props
+- [x] Adding Storybook
 
 ### React
 * Framework/library
