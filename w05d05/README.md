@@ -1,56 +1,60 @@
-# W05D05 - Midterm Project Kickoff
+# W5D5 Mid-term Project Kickoff
 
-### What are we getting out of this?
-* Learning to work as a team
-* Solidify your knowledge
+### Pick a Project
+- Wiki Map
+- Quiz App
+- Story Creator
+- Decision Maker
+- PasswordKeepR
+- Smart TODO List
+- Resource Wall
+- Buy/Sell Listing Website
+- Schoodle
+- Food Pick-up Ordering
 
-1. Choose a project
+### User Stories
+- A _user story_ describes how users will interact with your application
+- They have the form: As a ______, I want to ______, because ______.
+- eg. As a _user_, I want to _be able to save posts_, because _I want to review them later_.
+- User stories can also be negated: As a _____, I shouldn't be able to ______, because _____.
+- eg. As a _user_, I shouldn't be able to _edit other users posts_, because _I don't own those posts_.
 
-2. Turn our requirements into user stories
+### User Scenarios
+- A _user scenario_ is a syntactic alternative to user stories
+- They have the form: Given _____, when ______, then ______.
+- eg. Given _that I am logged in_, when _I click favourite on a post_, then _it is added to my favourites_.
+- You can also chain on an _and_ to user stories/scenarios
+- eg. Given _that I am logged in_, when _I click favourite on a post_, then _it is added to my favourites_ **and** _the save icon will change to indicate success_.
 
-### User Story
-* Describes how a user would interact with our app
-* As a _____, I can _____, because ______
-* As a user, I can see a list of maps, because I am interested in local things (craft breweries)
-* As a logged in user, I can see maps that I have created, because I want to be able to edit them
-* As a non-logged in user, I should not be able to see maps, because they don't belong to me
-
-* As a logged in user, I can favourite a map, because I want to see it later AND the heart icon turns red
-
-### Entities
-* Nouns become tables
-* ERD's
+### ERD
+- The user stories provide you with nouns (eg. user, posts, favourites)
+- Use these nouns/entities to build out your database (ie. tables are the nouns from the stories)
 
 ### Routes
-* Pathways to our data
-* Follow RESTful conventions
+- Once you know the resources that you'll have, write out the routes that you'll need to perform BREAD operations on those resources
+- Remember RESTful conventions (they make it much easier)
 
-Forms
-GET /menuitems/new
-GET /menuitems/:id/edit
-
-B  GET  /menuitems
-R  GET  /menuitems/:id
-E  POST /menuitems/:id
-A  POST /menuitems
-D  POST /menuitems/:id/delete
-
-### MVP
-* Most Valuable Player
-* Most Valuable Primate
-* Minimum Viable Product
-
-* MVD Minimum Viable Demo
-* If you're not going to demo it, don't build it
+### MVP vs MVD
+- There is a concept in development of an MVP, the Minimum Viable Product
+- An MVP has just enough features to be useful to a user
+- This concept helps streamline the development process and help keep the team on target
+- For mid-terms, we want to focus on the MVD, the Minimum Viable Demo
+- **If you aren't going to demo it, don't build it**
 
 ### Wireframes
-* Mockups
-* Show the minimum amount of information that any member of your team can implement
+- Draw out the structure of your web pages
+- This will make it much easier to build out these pages later
+- This is also a great opportunity to get input from all of the team members
+- Design matters... however you are a developer, not a designer
+- Get inspiration from websites you visit
 
 ### User Login
-* DON'T DO IT
+- Don't do it
+- Seriously, don't do it
+- We know that you know how to register and login users
 
 ```js
+// do this instead
 app.get('/login/:id', (req, res) => {
   req.session.user_id = req.params.id;
   res.redirect('/');
@@ -58,45 +62,37 @@ app.get('/login/:id', (req, res) => {
 ```
 
 ### Tech Choices
-* BE: Node, Express, Postgres
-* FE: HTML, CSS, JS, Sass, jQuery
+- We have made all the tech choices for you
+- Back End: Node and Express
+- Front End: HTML, CSS, JS, jQuery, Bootstrap
 
-### SPA vs Multi-page
-* Not mutually exclusive
+### The Mid-term Skeleton
+- Use the provided `node-skeleton` as a template for your project
+- This will get you up and running quickly
+
+### SPA vs Multi-page App
+- These concepts are not mutually exclusive
+- You can choose one or the other or both
 
 ### Git
-* Merge conflicts happen
-* Use branches
-* DO NOT CODE ON MASTER
+- Use Git best practices (ask a mentor for clarification if you need it)
+- Use branches
 
-### Splitting up the work
-* Horizontally
-* Vertically
-* Pair Programming
+### DO NOT CODE ON MASTER
+- I repeat, do not code on master
 
-PostMan gui curl
+### Splitting up the Work
+- Horizontally - whole team working on front-end or back-end at the same time
+- Vertically - divide the work between front-end and back-end
+- Pair Programming - working together on the same tasks
 
 ### Communication
-* Utmost importance
-* Make sure you're doing it
+- Make sure to communicate with your team members
+- Use Slack, iMessage, Google Hangouts, whatever... just make sure that everyone is on the same page
+
+### Github Projects
+- Github has a built-in project board (similar to a kanban board)
 
 ### Deployment
-* Up to you and your group
-
-Kanban
-To Do
-In Progess
-Complete
-
-Planning directory
-UserStories.md
-Routes.md
-MockupOne.png
-ERD.png
-
-
-
-
-
-
-# 
+- Decide if you want/need to deploy your application to the cloud
+- Ask a mentor for assistance/advice if your team decides to deploy
