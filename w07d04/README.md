@@ -4,10 +4,10 @@
 - [x] Custom Hooks
 - [x] `useDocumentTitle`
 - [x] TDD: `useMousePosition`
-- [ ] TDD: `useInput`
-- [ ] `useLocationData`
-- [ ] `useRequest`
-- [ ] `useKeyPress`
+- [x] TDD: `useInput`
+- [x] `useLocationData`
+- [x] `useRequest`
+- [x] `useKeyPress`
 
 ### Custom Hook
 * A hook that you make
