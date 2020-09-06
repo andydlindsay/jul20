@@ -1,4 +1,4 @@
-import { announceResult } from '../helpers'
+import { announceResult, chooseRobotItem, genFeedbackMessage } from '../helpers'
 
 describe('announceResult function', () => {
   let fakeState;
@@ -32,5 +32,34 @@ describe('announceResult function', () => {
 
   test('returns "Waiting" if nothing is passed in', () => {
     expect(announceResult()).toBe('Waiting');
+  });
+});
+
+describe('genFeedbackMessage function', () => {
+  test('returns appropriate message when given "Lost"', () => {
+    const loss = genFeedbackMessage('Lost');
+    expect(loss).toEqual('You lost!');
+  });
+
+  test('returns appropriate message when given "Won"', () => {
+    const win = genFeedbackMessage('Won');
+    expect(win).toEqual('Good job!');
+  });
+
+  test('returns appropriate message when given "Tied"', () => {
+    const tie = genFeedbackMessage('Tied');
+    expect(tie).toEqual('Tie game!');
+  });
+
+  test('returns appropriate message when given "Waiting"', () => {
+    const waiting = genFeedbackMessage('Waiting');
+    expect(waiting).toEqual('Waiting for your choice!');
+  });
+});
+
+describe('chooseRobotItem function', () => {
+  test('returns "Moai" every time', () => {
+    const result = chooseRobotItem();
+    expect(result).toBe('Moai');
   });
 });
