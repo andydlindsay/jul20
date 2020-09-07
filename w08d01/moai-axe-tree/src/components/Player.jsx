@@ -1,14 +1,19 @@
 import React, { useEffect } from 'react';
 import { announceResult, chooseRobotItem } from '../helpers/helpers';
 
+const registerPlayerItem = (value, updater) => {
+  updater(prevState => ({ ...prevState, playerSelection: value }));
+};
+
+const options = [
+  ['Moai', '🗿'],
+  ['Axe', '🪓'],
+  ['Tree', '🌳']
+];
+
 const Player = (props) => {
   const {playerSelection, compSelection, cheating} = props.state;
   const {setState} = props;
-  const options = [
-    ['Moai', '🗿'],
-    ['Axe', '🪓'],
-    ['Tree', '🌳']
-  ];
 
   useEffect(() => {
     if(playerSelection && compSelection){
@@ -32,10 +37,6 @@ const Player = (props) => {
         status: 'Waiting'
       }
     ));
-  };
-
-  const registerPlayerItem = (value, updater) => {
-    updater(prevState => ({ ...prevState, playerSelection: value }));
   };
 
   return (
