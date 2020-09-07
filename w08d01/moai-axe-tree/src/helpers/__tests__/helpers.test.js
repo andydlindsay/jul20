@@ -58,8 +58,34 @@ describe('genFeedbackMessage function', () => {
 });
 
 describe('chooseRobotItem function', () => {
-  test('returns "Moai" every time', () => {
-    const result = chooseRobotItem();
+  test('returns "Axe" if cheating and given "Tree"', () => {
+    const cheating = true;
+    const playerSelection = 'Tree';
+    const result = chooseRobotItem(cheating, playerSelection);
+    expect(result).toBe('Axe');
+  });
+
+  test('returns "Moai" if cheating and given "Axe"', () => {
+    const cheating = true;
+    const playerSelection = 'Axe';
+    const result = chooseRobotItem(cheating, playerSelection);
     expect(result).toBe('Moai');
+  });
+
+  test('returns "Tree" if cheating and given "Moai"', () => {
+    const cheating = true;
+    const playerSelection = 'Moai';
+    const result = chooseRobotItem(cheating, playerSelection);
+    expect(result).toBe('Tree');
+  });
+
+  test('returns a valid response if not cheating', () => {
+    const cheating = false;
+    const playerSelection = 'Moai';
+    const result = chooseRobotItem(cheating, playerSelection);
+    const options = ['Moai', 'Axe', 'Tree'];
+
+    // expect(options.includes(result)).toBeTruthy();
+    expect(options).toContain(result);
   });
 });

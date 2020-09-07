@@ -12,7 +12,7 @@ const options = [
 ];
 
 const Player = (props) => {
-  const {playerSelection, compSelection } = props.state;
+  const {playerSelection, compSelection, cheating } = props.state;
   const {setState} = props;
 
   useEffect(() => {
@@ -24,10 +24,10 @@ const Player = (props) => {
 
   useEffect(() => {
     if (playerSelection) {
-      const compSelection = chooseRobotItem();
+      const compSelection = chooseRobotItem(cheating, playerSelection);
       setState(prevState => ({ ...prevState, compSelection }));
     }
-  }, [playerSelection, setState]);
+  }, [playerSelection, setState, cheating]);
 
   const resetState = () => {
     setState(prevState => ({
