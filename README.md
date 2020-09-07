@@ -15,3 +15,4 @@
 * [W07D01 - Component-Based UI w/ React](https://github.com/andydlindsay/jul20/tree/master/w07d01)
 * [W07D04 - Custom Hooks](https://github.com/andydlindsay/jul20/tree/master/w07d04)
 * [W08D01 - Unit & Integration Testing](https://github.com/andydlindsay/jul20/tree/master/w08d01)
+* [W08D04 - Class-based Components](https://github.com/andydlindsay/jul20/tree/master/w08d04)
