@@ -17,3 +17,4 @@
 * [W08D01 - Unit & Integration Testing](https://github.com/andydlindsay/jul20/tree/master/w08d01)
 * [W08D04 - Class-based Components](https://github.com/andydlindsay/jul20/tree/master/w08d04)
 * [W10D01 - Rails Review](https://github.com/andydlindsay/jul20/tree/master/w10d01)
+* [W10D03 - Intro to TypeScript](https://github.com/andydlindsay/jul20/tree/master/w10d03)
