@@ -6,9 +6,17 @@
 * [x] Primitive Types
 * [x] Arrays
 * [x] Objects
-* [ ] Functions and Methods
-* [ ] Duck Typing
-* [ ] Generics
+* [x] Functions and Methods
+* [x] Duck Typing
+* [x] Generics
+
+TSX => JSX
+
+```json
+"scripts": {
+  "start": "tsc && node ./build/server.js"
+}
+```
 
 ### TypeScript
 * Superset of JavaScript (SCSS)

@@ -8,3 +8,5 @@ const user: IUser = {
   username: 'jstamos',
   password: '1234'
 };
+
+const user2: IUser = {} as IUser;
