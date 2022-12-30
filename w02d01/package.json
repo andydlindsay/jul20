@@ -17,6 +17,6 @@
   "author": "Andy Lindsay",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^8.0.1"
+    "mocha": "^8.4.0"
   }
 }
